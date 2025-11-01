@@ -26,8 +26,19 @@ body {
   animation: fadeIn 0.8s ease-in-out;
 }
 .abes-logo {
-  width: 90px;
-  margin-bottom: 10px;
+  width: 80px;
+  max-width: 25%;
+  height: auto;
+  margin-bottom: 12px;
+}
+
+/* 📱 Mobile optimization */
+@media (max-width: 480px) {
+  .abes-logo {
+    width: 60px;
+    max-width: 30%;
+    margin-bottom: 8px;
+  }
 }
 
 h2 {
