@@ -25,6 +25,10 @@ body {
   text-align: center;
   animation: fadeIn 0.8s ease-in-out;
 }
+.abes-logo {
+  width: 90px;
+  margin-bottom: 10px;
+}
 
 h2 {
   margin-bottom: 20px;
