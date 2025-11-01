@@ -1,51 +1,71 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
 body {
-  font-family: "Poppins", sans-serif;
-  background: linear-gradient(to right, #00c6ff, #0072ff);
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
   margin: 0;
+  color: #333;
+  padding: 10px;
+  box-sizing: border-box;
 }
 
 .container {
   background: white;
-  padding: 25px;
-  border-radius: 15px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  width: 350px;
+  width: 100%;
+  max-width: 380px;
+  padding: 30px 25px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
   text-align: center;
+  animation: fadeIn 0.8s ease-in-out;
 }
 
 h2 {
-  color: #333;
   margin-bottom: 20px;
+  color: #1a1a1a;
+  font-weight: 600;
+  font-size: 1.4rem;
 }
 
 input {
-  width: 90%;
-  padding: 10px;
-  margin: 8px 0;
-  border-radius: 8px;
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 10px;
   border: 1px solid #ccc;
-  font-size: 14px;
+  font-size: 15px;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+input:focus {
+  border-color: #0072ff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 114, 255, 0.3);
 }
 
 button {
-  width: 95%;
-  padding: 10px;
-  background-color: #0072ff;
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(to right, #0072ff, #00c6ff);
   border: none;
+  border-radius: 10px;
   color: white;
   font-size: 16px;
-  border-radius: 8px;
+  font-weight: 500;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 button:hover {
-  background-color: #005ecb;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0,114,255,0.3);
 }
 
 .msg {
@@ -62,38 +82,47 @@ label {
   font-size: 13px;
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 6px;
   justify-content: center;
+  margin-top: 8px;
 }
 
-/* footer style */
-footer {
-  margin-top: 20px;
-  font-size: 13px;
-  color: #f1f1f1;
+/* ✅ Footer perfectly centered */
+.footer {
   text-align: center;
-  position: absolute;
-  bottom: 10px;
+  width: 100%;
+  margin-top: 15px;
+  font-size: 13px;
+  color: white;
+  opacity: 0.9;
+  position: relative;
+  bottom: 0;
 }
-/* 🔹 Responsive Design for Mobile */
+
+.footer a {
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* 📱 Mobile Optimization */
 @media (max-width: 480px) {
   .container {
-    width: 90%;
-    padding: 20px;
+    padding: 25px 20px;
   }
-
   h2 {
-    font-size: 20px;
+    font-size: 1.3rem;
   }
-
   input, button {
     font-size: 14px;
-    width: 100%;
-  }
-
-  footer {
-    font-size: 12px;
-    bottom: 5px;
   }
 }
-
