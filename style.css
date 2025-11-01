@@ -82,10 +82,17 @@ label {
   font-size: 13px;
   display: flex;
   align-items: center;
-  gap: 6px;
   justify-content: center;
-  margin-top: 8px;
+  gap: 8px;
+  margin: 10px 0;
 }
+
+label input[type="checkbox"] {
+  accent-color: #0072ff;  /* blue tick */
+  width: 16px;
+  height: 16px;
+}
+
 
 /* ✅ Footer perfectly centered */
 .footer {
