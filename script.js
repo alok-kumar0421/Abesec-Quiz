@@ -41,7 +41,7 @@ document.getElementById("save").onclick = () => {
   const pin = pinInput.value.trim();
 
   if (!adm || !pin) {
-    credMsg.textContent = "Admission no. aur PIN dono zaruri hain.";
+    credMsg.textContent = "Admission no. and 4 digit pin both required.";
     return;
   }
 
